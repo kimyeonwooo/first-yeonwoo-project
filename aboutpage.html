@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  /* .container .row .col{
+    border: 0.3px solid black;
+  } */
+
+  .nav nav-tabs{
+    display: grid;
+  }
+  .row{
+    display: grid;
+    grid-template-columns: auto 500px;
+    margin: 0;
+    /* background-color: beige; */
+  }
+  .row1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 300px auto;
+    /* border: 0.3px solid black; */
+  }
+  .pic{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 25px;
+  }
+  #logo{
+    height: 100px;
+    margin: 0% 0% -2% 0%;
+  }
+  .bottomMenu{
+    /* object-position: center; */
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 500px auto;
+    margin-top: 230px;
+  }
+  .bottomlogo{
+    padding: 10px;
+    margin: 150px auto;
+  }
+  #lightbox {
+    position: fixed;  /* 위치 고정 */
+    width:100%;  /* 너비 */
+    height:100%;  /* 높이 */
+    background-color:rgba(0,0,0,0.7);  /* 배경색 */
+    top:0;  /* 시작 위치 - 위쪽 끝 */
+    left:0; /* 시작 위치 - 왼쪽 끝 */
+    display:none;  /* 화면에서 감추기 */
+  }
+  #lightbox img {
+    position:absolute;  /* top, left에 의해 위치 지정 */
+    top:50%;  /* 위쪽에서 50% 부터 */
+    left:50%;  /* 왼쪽에서 50% 부터 */
+    transform:translate(-50%, -50%);  /* 요소를 화면 중앙에 표시하기 위해 이동 */
+    border:5px solid #eee; /* 이미지 테두리 */       
+  }
+  h6{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+  }
+</style>
+<body>
+  
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a href="mainpage.html"><img id="logo" src="images/logo_yeon.jpg" alt=""></a>
+      </div>
+      <div class="col">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="mainpage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profilepage.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutpage.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.notion.so/HTML-540fb86e94324b379408a4b046f5be53">Notion</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="row1">
+      <div class="col">
+        <img class="pic" src="images/1-1.jpg" data-src="images/1.jpg">
+        <img class="pic" src="images/2-2.jpg" data-src="images/2.jpg">
+        <img class="pic" src="images/3-3.jpg" data-src="images/3.jpg">
+        <img class="pic" src="images/4-4.jpg" data-src="images/4.jpg">
+        <img class="pic" src="images/5-5.jpg" data-src="images/5.jpg">
+        <img class="pic" src="images/8-8.jpg" data-src="images/8.jpg">
+        
+      <div id="lightbox">
+        <img src="imgages/1.jpg" alt="" id="lightboxImage">
+      </div>
+      <script>
+        var pics = document.getElementsByClassName("pic");
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImage = document.getElementById("lightboxImage");
+
+        for(i=0; i<pics.length; i++){
+          pics[i].addEventListener("click", showLightbox);
+        }
+
+        function showLightbox(){
+          var bigLocation = this.getAttribute("data-src");
+          lightboxImage.setAttribute("src", bigLocation);
+          lightbox.style.display = "block";
+        }
+
+        lightbox.onclick = function(){
+          lightbox.style.display = "none";
+        }
+      </script>
+      </div>
+
+
+      <div class="col">
+        Minim sunt eiusmod commodo fugiat laboris duis culpa labore amet. Laboris minim pariatur ex veniam eu exercitation officia. Duis laborum exercitation exercitation magna. Est est deserunt dolor aliqua ut amet ex cupidatat sint id. Ex duis nostrud sit cupidatat sint tempor.
+
+Id anim amet adipisicing veniam incididunt tempor. Occaecat cupidatat consequat pariatur nostrud sunt laborum esse sint aliquip velit commodo sunt tempor Lorem. Duis ex pariatur labore sit mollit laboris et et pariatur occaecat veniam ullamco deserunt.
+
+Aliqua laborum ipsum ex anim qui in aliquip et duis dolore aliquip adipisicing. Sint esse est nisi qui esse eiusmod cupidatat. Incididunt nostrud anim in eu.
+
+Quis adipisicing laborum eiusmod non cillum dolor reprehenderit labore aute ullamco velit. Labore et commodo esse et. Reprehenderit consectetur aliquip do elit aliquip et ex eu proident ut duis. Quis proident velit quis laboris dolor ea sint dolor non. Cupidatat nisi deserunt elit consectetur aliqua exercitation deserunt cupidatat.
+
+Et magna commodo qui est et. Quis laboris dolor occaecat consequat ad exercitation aliqua consectetur incididunt eu sit. Ipsum tempor excepteur eu officia. Dolor labore dolore fugiat aliquip laborum labore ea aliqua proident nulla velit Lorem. Velit aute laboris eu non nostrud mollit tempor.
+
+Deserunt pariatur commodo amet nisi voluptate voluptate ullamco tempor consectetur consequat ipsum elit eiusmod. Consequat qui amet non officia est eu veniam minim non incididunt magna culpa et aute. Qui aliquip occaecat voluptate sit elit commodo laborum ea sint culpa ad proident. Ex do consequat deserunt qui et eiusmod eu non enim nostrud in. Est labore qui id velit ut ut nostrud fugiat fugiat. Consectetur et laboris esse eiusmod nisi excepteur.
+      </div>
+
+    </div>
+  </div>
+  <footer class="bottomMenu">
+    <a href="mailto:apple1471_@naver.com" class="bottomlogo"><img src="images/phone_logo.png" alt="phonenumber"></a>
+    <a href="tel:010-0000-0000" class="bottomlogo"><img src="images/email_logo.jpg" alt="email"></a>
+    <a href="#" class="bottomlogo"><img src="images/Instagram_logo.jpg" alt="instagram"></a>
+    <h6>니가 선택한 길이다. 악으로 깡으로 버텨라</h6>
+  </footer>
+</body>
+</html>
